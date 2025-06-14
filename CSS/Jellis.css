@@ -70,6 +70,10 @@
     transition: all 10s;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* colors */
 .bg-grape { background-color: var(--jelli-grape-rgba); }
 .bg-strawberry { background-color: var(--jelli-strawberry-rgba); }
