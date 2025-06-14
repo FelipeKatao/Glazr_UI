@@ -663,7 +663,6 @@ body{
   position: relative;
   display: inline-block;
 
-  perspective: 1000px;
   text-align: center;
 }
 
@@ -673,19 +672,15 @@ body{
   left: 0;
 
   border-radius: var(--radius-small);
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.4);
+
+
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
 
   transition: opacity 0.4s ease;
-  box-shadow:
-    0 4px 14px rgba(0, 0, 0, 0.1),
-    inset 0 1px 2px rgba(255, 255, 255, 0.4);
+
 }
 
 /* Frente visível inicialmente */
