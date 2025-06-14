@@ -1,0 +1,555 @@
+:root {
+  --jelli-grape-rgba: rgba(191, 169, 217, 0.6);
+  --jelli-strawberry-rgba: rgba(247, 167, 184, 0.6);
+  --jelli-peach-rgba: rgba(250, 203, 170, 0.6);
+  --jelli-lemon-rgba: rgba(253, 241, 165, 0.6);
+  --jelli-mint-rgba: rgba(184, 235, 208, 0.6);
+  --jelli-blueberry-rgba: rgba(178, 215, 242, 0.6);
+  
+
+  --jelli-soft-shadow-rgba: rgba(212, 212, 212, 0.6);
+  --jelli-glass-tint-rgba: rgba(232, 232, 235, 0.6);
+  --jelli-black-rgba: rgba(44, 44, 44, 0.6);
+  --jelli-white-rgba: rgba(255, 255, 255, 0.6);
+  --jelli-frosted-rgba: rgba(202, 219, 230, 0.6);
+
+  --jelli-success-rgba: rgba(168, 230, 196, 0.6);
+  --jelli-warning-rgba: rgba(253, 216, 164, 0.6);
+  --jelli-error-rgba: rgba(245, 163, 163, 0.6);
+  --jelli-info-rgba: rgba(174, 223, 247, 0.6);
+
+  --bg-jelli-blue-rgba: rgba(230, 241, 250, 0.6);
+  --bg-jelli-red-rgba: rgba(250, 230, 233, 0.6);
+  --bg-jelli-yellow-rgba: rgba(255, 247, 214, 0.6);
+  --bg-jelli-green-rgba: rgba(231, 248, 236, 0.6);
+  --bg-jelli-purple-rgba: rgba(241, 232, 250, 0.6);
+  --bg-jelli-orange-rgba: rgba(255, 238, 221, 0.6);
+  --bg-jelli-brown-rgba: rgba(246, 241, 235, 0.6);
+  --bg-jelli-gray-rgba: rgba(245, 247, 249, 0.6);
+
+  --jelli-grape: #6d508b;
+  --jelli-strawberry: #f5728e;
+  --jelli-peach: #eeab7b;
+  --jelli-lemon: #796d20;
+  --jelli-mint: #B8EBD0;
+  --jelli-blueberry: #6cb2e4;
+  --jelli-coconut: #afb5b8;
+
+  --jelli-soft-shadow: #D4D4D4;
+  --jelli-glass-tint: #E8E8EB;
+  --jelli-black: #2C2C2C;
+  --jelli-white: #FFFFFF;
+  --jelli-frosted: #CADBE6;
+
+  --jelli-success: #A8E6C4;
+  --jelli-warning: #FDD8A4;
+  --jelli-error: #F5A3A3;
+  --jelli-info: #AEDFF7;
+
+  --radius-large: 24px;
+  --radius-small: 12px;
+  --blur-glass: blur(8px);
+  --shadow-jelli: 0 4px 14px rgba(0, 0, 0, 0.1);
+
+    --bg-jelli-blue:   #E6F1FA;
+  --bg-jelli-red:    #FAE6E9;
+  --bg-jelli-yellow: #FFF7D6;
+  --bg-jelli-green:  #E7F8EC;
+  --bg-jelli-purple: #F1E8FA;
+  --bg-jelli-orange: #FFEEDD;
+  --bg-jelli-brown:  #F6F1EB;
+  --bg-jelli-gray:   #F5F7F9;
+
+    --jelli-border: rgba(255, 255, 255, 0.5);
+  --jelli-bg: rgba(255, 255, 255, 0.4);
+  --jelli-radius: 16px;
+  --jelli-blur: blur(8px);
+}
+
+*:hover{
+    transition: all 10s;
+}
+
+/* colors */
+.bg-grape { background-color: var(--jelli-grape-rgba); }
+.bg-strawberry { background-color: var(--jelli-strawberry-rgba); }
+.bg-peach { background-color: var(--jelli-peach-rgba); }
+.bg-lemon { background-color: var(--jelli-lemon-rgba); }
+.bg-mint { background-color: var(--jelli-mint-rgba); }
+.bg-blueberry { background-color: var(--jelli-blueberry-rgba); }
+.bg-coconut { background-color: var(--jelli-coconut-rgba); }
+
+.text-grape { color: var(--jelli-grape); }
+.text-pink { color: var(--jelli-strawberry); }
+.text-peach { color: var(--jelli-peach); }
+.text-lemon { color: var(--jelli-lemon); }
+.text-mint { color: var(--jelli-mint); }
+.text-blueberry { color: var(--jelli-blueberry); }
+.text-coconut { color: var(--jelli-coconut); }
+
+
+/* Status Colors */
+.bg-success { background-color: var(--jelli-success-rgba); }
+.bg-warning { background-color: var(--jelli-warning-rgba); }
+.bg-error { background-color: var(--jelli-error-rgba); }
+.bg-info { background-color: var(--jelli-info-rgba); }
+
+.text-success { color: var(--jelli-success); }
+.text-warning { color: var(--jelli-warning); }
+.text-error { color: var(--jelli-error); }
+.text-info { color: var(--jelli-info); }
+
+/* Second colors */
+.bg-soft-shadow { background-color: var(--jelli-soft-shadow-rgba); }
+.bg-glass-tint { background-color: var(--jelli-glass-tint-rgba); }
+.bg-frosted { background-color: var(--jelli-frosted-rgba); }
+.bg-black { background-color: var(--jelli-black-rgba); }
+.bg-white { background-color: var(--jelli-white-rgba); }
+
+.text-soft-shadow { color: var(--jelli-soft-shadow-rgba); }
+.text-glass-tint { color: var(--jelli-glass-tint); }
+.text-frosted { color: var(--jelli-frosted); }
+.text-black { color: var(--jelli-black); }
+.text-white { color: var(--jelli-white); }
+
+/* Jelli Cards */
+.jelli-card {
+  backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--jelli-frosted);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-jelli),
+              inset 0 2px 6px rgba(0, 0, 0, 0.05); /* Inner shadow */
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  width: 20%;
+  
+}
+
+.jelli-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+/*Containner*/
+
+.jelli-container {
+  background: linear-gradient(
+    135deg,
+    var(--jelli-mint),
+    var(--jelli-blueberry),
+    var(--jelli-coconut)
+  );
+  padding: 2rem;
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-jelli);
+  backdrop-filter: var(--blur-glass);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow:
+  0 4px 14px rgba(0, 0, 0, 0.1), /* shadow externa */
+  inset 0 2px 6px rgba(0, 0, 0, 0.05), /* inner leve */
+  inset 0 -1px 2px rgba(255, 255, 255, 0.3); /* brilho interno no topo */
+}
+
+.jelli-container-default {
+  backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--jelli-frosted);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-jelli), inset 0 2px 6px rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+}
+
+.jelli-container-grape {
+  backdrop-filter: var(--blur-glass);
+  border: 1px solid rgba(191, 169, 217, 0.4);
+  border-radius: var(--radius-large);
+  box-shadow: 0 4px 14px rgba(85, 60, 120, 0.12),
+              inset 0 2px 6px rgba(85, 60, 120, 0.08);
+  padding: 2rem;
+}
+
+.jelli-container-pink-glow {
+  background: linear-gradient(
+    145deg,
+    rgba(247, 167, 184, 0.25),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: var(--blur-glass);
+  border: 1px solid rgba(247, 167, 184, 0.4);
+  border-radius: var(--radius-large);
+  box-shadow:
+    0 4px 14px rgba(247, 167, 184, 0.2),
+    inset 0 2px 4px rgba(247, 167, 184, 0.15),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+}
+
+.jelli-container-lemon-glass {
+  background: rgba(253, 241, 165, 0.2); /* --jelli-lemon */
+  backdrop-filter: var(--blur-glass);
+  border: 1px solid rgba(253, 241, 165, 0.4);
+  border-radius: var(--radius-large);
+  box-shadow:
+    0 8px 20px rgba(253, 241, 165, 0.15),
+    inset 0 2px 6px rgba(253, 241, 165, 0.08);
+  padding: 2rem;
+}
+
+
+
+/*  Menu base */
+.jelli-horizontal-menu {
+  width: 98%;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.06),
+              0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content:first baseline;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.jelli-horizontal-menu a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  transition: background 0.2s ease;
+  transition: 0.2s;
+}
+
+.jelli-horizontal-menu a:hover {
+    box-shadow:
+    inset 0 1px 4px rgba(255, 255, 255, 0.6),
+    0 6px 14px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: 0.5s;
+}
+
+
+/* Banner */
+
+.jelli-banner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  border-radius: var(--radius-large);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: var(--blur-glass);
+  -webkit-backdrop-filter: var(--blur-glass);
+  box-shadow:
+    inset 0 4px 10px rgba(255, 255, 255, 0.4),
+    0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.jelli-banner h1 {
+  font-size: 2.5rem;
+  color: var(--jelli-black);
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+}
+
+
+/* Layputs*/ 
+.jelli-layout {
+    position: relative;
+  backdrop-filter: var(--jelli-blur);
+  -webkit-backdrop-filter: var(--jelli-blur);
+  border: 1px solid var(--jelli-border);
+  border-radius: var(--jelli-radius);
+  padding: 1rem;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2),
+              0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.jelli-generic-container {
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  background-color: rgba(255, 255, 255, 0.4); /* branco translúcido */
+  
+  border: 1.5px solid rgba(255, 255, 255, 0.5); /* efeito "vidro condensado" */
+  border-radius: var(--radius-large, 24px);
+  
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.06);
+  
+  padding: 2rem;
+  transition: all 0.3s ease;
+
+}
+
+.jelli-generic-container:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    inset 0 1px 4px rgba(255, 255, 255, 0.5),
+    0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.jelli-align-center{
+     margin: 1rem auto;
+}
+
+.jelli-align-left{
+  justify-self: flex-start;
+  text-align: left;
+}
+
+.jelli-align-right{
+  justify-self: flex-end;
+  text-align: right;
+}
+
+.layout-small {
+  max-width: 400px;
+  width: 20%;
+}
+
+.layout-medium {
+  max-width: 720px;
+  width: 40%;
+}
+
+.layout-large {
+  max-width: 1080px;
+  width: 80%;
+}
+
+.align-left {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.align-center {
+  text-align: center;
+  justify-content: center;
+}
+
+.align-right {
+  text-align: right;
+  justify-content: flex-end;
+}
+.jelli-flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.jelli-flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.jelli-margin{
+    margin: auto;
+}
+
+.jelli_absolute{
+    position: absolute;
+}
+
+/*Button*/
+
+.jelli-button {
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  padding: 0.75rem 1.5rem;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow:
+    inset 0 1px 3px rgba(255, 255, 255, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.jelli-button:hover {
+  box-shadow:
+    inset 0 1px 4px rgba(255, 255, 255, 0.6),
+    0 6px 14px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/*Texto*/
+
+.jelli-title {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+}
+
+.jelli-subtitle {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  opacity: 0.9;
+  text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.4);
+}
+
+.jelli-text {
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+
+.jelli-note {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  opacity: 0.65;
+  font-style: italic;
+}
+
+.jelly-class-04{
+    opacity: 0.4;
+}
+
+
+/* Animations */
+
+.jelli-hover-light {
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 0;
+}
+.jelli-hover-light:hover {
+  box-shadow:
+    inset 0 1px 6px rgba(255, 255, 255, 0.7),   /* luz interna suave */
+    0 4px 14px rgba(255, 255, 255, 0.4),        /* brilho ao redor */
+    0 0 30px rgba(255, 255, 255, 0.3);          /* luz difusa */
+  transform: scale(1.02);                      /* ligeiro crescimento */
+  backdrop-filter: blur(10px) brightness(1.05);/* efeito luminoso */
+  -webkit-backdrop-filter: blur(10px) brightness(1.05);
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.6); /* realce no texto */
+}
+
+@keyframes jelli-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-1px); }
+  40% { transform: translateX(0px); }
+  60% { transform: translateX(-1px); }
+  80% { transform: translateX(1px); }
+}
+
+.jelli-hover-shake:hover {
+  animation: jelli-shake 1s linear infinite;
+}
+
+/* Componentes Simples */ 
+.jelli-avatar{
+ width: 96px;
+  height: 96px;
+  border-radius: 50%;
+
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+.jelli-avatar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(178, 215, 242, 0.6),
+    rgba(198, 225, 255, 0.9),
+    rgba(255, 255, 255, 0.3)
+  );
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  pointer-events: none;
+}
+
+.jelli-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+
+
+  border: 2px solid transparent;
+  border-radius: var(--radius-small, 12px);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.jelli-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(178, 215, 242, 0.6),
+    rgba(198, 225, 255, 0.9),
+    rgba(255, 255, 255, 0.3)
+  );
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Footer */
+
+.jelli-footer {
+  width: 100%;
+  padding: 2rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.25); /* gelatina branca translúcida */
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.4); /* borda vítrea */
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.3),
+    0 -4px 10px rgba(0, 0, 0, 0.06); /* leve sombra */
+  border-radius: 24px 24px 0 0;
+  text-align: center;
+  color: var(--jelli-black);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
