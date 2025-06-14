@@ -41,7 +41,7 @@
   --jelli-white: #FFFFFF;
   --jelli-frosted: #CADBE6;
 
-  --jelli-success: #A8E6C4;
+  --jelli-success: #57cc8c;
   --jelli-warning: #FDD8A4;
   --jelli-error: #F5A3A3;
   --jelli-info: #AEDFF7;
@@ -358,6 +358,9 @@
 .jelli_absolute{
     position: absolute;
 }
+.jelli-wrap{
+    flex-wrap: wrap;
+}
 
 /*Button*/
 
@@ -553,3 +556,165 @@
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
 }
+
+/* Jelli efects */
+
+.jelli-effect {
+
+  backdrop-filter: blur(10px) saturate(130%);
+  -webkit-backdrop-filter: blur(10px) saturate(130%);
+  
+  border: 2px solid transparent;
+  border-radius: var(--radius-small, 12px);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 4px rgba(255, 255, 255, 0.6),
+    0 6px 14px rgba(0, 0, 0, 0.15);
+
+}
+
+.jelli-effect::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(178, 215, 242, 0.5),
+    rgba(220, 240, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.jelli-effect:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(178, 215, 242, 0.6); /* luz azul clara */
+}
+
+/* Jelli lists */
+
+.jelli-list {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.jelli-list-item {
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 8px;
+}
+
+/* Linha jelly colorida ao passar o mouse */
+.jelli-list-item::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  height: 3px;
+  background: var(--jelli-peach, #FACBAA); 
+  border-radius: 3px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animação tremor + linha jelly */
+.jelli-list-item:hover::after {
+  transform: scaleX(1);
+}
+.jelli-list-item:hover {
+  animation: jelli-shake 0.3s ease;
+}
+
+/* Keyframe para o leve tremor tipo gelatina */
+@keyframes jelli-shake {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(1px); }
+  50%  { transform: translateY(-1px); }
+  75%  { transform: translateY(1px); }
+  100% { transform: translateY(0); }
+}
+
+/*Jelli box*/
+
+.jelli-hover-box {
+  position: relative;
+  display: inline-block;
+
+  perspective: 1000px;
+  text-align: center;
+}
+
+.jelli-hover-box > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-small);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #2c2c2c;
+  transition: opacity 0.4s ease;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+/* Frente visível inicialmente */
+.jelli-front {
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Verso oculto */
+.jelli-back {
+  z-index: 1;
+  opacity: 0;
+  animation: jelly-bounce 2s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Quando passa o mouse, troca os elementos */
+.jelli-hover-box:hover .jelli-front {
+  opacity: 0;
+}
+.jelli-hover-box:hover .jelli-back {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+/* Animação de gelatina lenta */
+@keyframes jelly-bounce {
+  0%   { transform: translateY(0); }
+  20%  { transform: translateY(-2px) rotate(-1deg); }
+  40%  { transform: translateY(1px) rotate(1deg); }
+  60%  { transform: translateY(-1px) rotate(-0.5deg); }
+  80%  { transform: translateY(0.5px) rotate(0.5deg); }
+  100% { transform: translateY(0); }
+}
+
