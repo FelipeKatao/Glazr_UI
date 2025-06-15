@@ -1,0 +1,385 @@
+/* =============================
+   Jelli UI - Refatorado e Modular
+   ============================= */
+
+:root {
+  /* Cores principais translúcidas com opacidade agradável à leitura */
+  --jelli-glass-white: rgba(255, 255, 255, 0.4);
+  --jelli-glass-bright: rgba(255, 255, 255, 0.6);
+  --jelli-glass-dark: rgba(0, 0, 0, 0.1);
+
+  /* Cores vibrantes com opacidade equilibrada */
+  --jelli-glass-blue: rgba(178, 215, 242, 0.4);
+  --jelli-glass-pink: rgba(247, 167, 184, 0.4);
+  --jelli-glass-mint: rgba(184, 235, 208, 0.4);
+  --jelli-glass-grape: rgba(191, 169, 217, 0.4);
+
+  /* Formas e sombras */
+  --jelli-radius: 16px;
+  --jelli-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --jelli-shadow-inset: inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  --jelli-blur: blur(10px);
+
+  /* Profundidade */
+  --jelli-depth-1: translateZ(0);
+  --jelli-depth-2: translateZ(5px);
+  --jelli-depth-3: translateZ(10px);
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ========== Container jelly moderno com borda translúcida e fundo customizado ==========
+   Permite aplicar degradês personalizados e manter estética de vidro/gelatina
+*/
+
+.jelli-container {
+    display: flex;
+flex-direction: row;
+  position: relative;
+  padding: 1rem;
+  border-radius: var(--jelli-radius);
+  backdrop-filter: var(--jelli-blur);
+  -webkit-backdrop-filter: var(--jelli-blur);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.08),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+  isolation: isolate;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/*  Corees padrão para o efeito Jelly */
+.jelli-grape-bg {background: linear-gradient(135deg, rgba(192, 154, 235, 0.37), rgba(106, 64, 153, 0.37));}
+
+.jelli-grape-text{color: rgb(72, 24, 117);}
+
+
+.jelli-blue-bg {
+  background: linear-gradient(135deg, rgba(90, 176, 255, 0.4), rgba(208, 232, 255, 0.25));
+}
+.jelli-blue-text {
+  color: rgb(25, 78, 129);
+}
+
+
+.jelli-green-bg {
+  background: linear-gradient(135deg, rgba(153, 230, 180, 0.4), rgba(204, 255, 221, 0.25));
+}
+.jelli-green-text {
+  color: rgb(21, 102, 57);
+}
+
+.jelli-yellow-bg {
+  background: linear-gradient(135deg, rgba(255, 245, 140, 0.4), rgba(255, 255, 200, 0.25));
+}
+.jelli-yellow-text {
+  color: rgb(120, 98, 0);
+}
+
+
+.jelli-red-bg {
+  background: linear-gradient(135deg, rgba(255, 150, 150, 0.4), rgba(255, 200, 200, 0.25));
+}
+.jelli-red-text {
+  color: rgb(140, 40, 40);
+}
+
+.jelli-orange-bg {
+  background: linear-gradient(135deg, rgba(255, 190, 120, 0.4), rgba(255, 230, 180, 0.25));
+}
+.jelli-orange-text {
+  color: rgb(150, 85, 20);
+}
+
+
+.jelli-purple-bg {
+  background: linear-gradient(135deg, rgba(180, 150, 255, 0.4), rgba(230, 210, 255, 0.25));
+}
+.jelli-purple-text {
+  color: rgb(85, 50, 130);
+}
+
+
+.jelli-gray-bg {
+  background: linear-gradient(135deg, rgba(200, 200, 200, 0.3), rgba(240, 240, 240, 0.2));
+}
+.jelli-gray-text {
+  color: rgb(60, 60, 60);
+}
+
+.jelli-black-bg {
+  background: linear-gradient(135deg, rgba(40, 40, 40, 0.6), rgba(10, 10, 10, 0.4));
+}
+.jelli-black-text {
+  color: #ffffff;
+}
+
+
+.jelli-white-bg {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(245, 245, 245, 0.3));
+}
+.jelli-white-text {
+  color: #3d3d3d;
+}
+
+/* Profundidade */
+.jelli-deph-1{filter: drop-shadow(-2px 3px 7px #828282);}
+
+.jelli-deph-2{filter: drop-shadow(1px 21px 14px #828282);}
+
+.jelli-deph-3{filter: drop-shadow(1px 40px 29px #828282);}
+
+/*Container-Types*/
+.jelli-card{
+    width: 50vh;
+}
+.jelli-card-overflow{
+    width: 20%;
+    height: 20vh;
+    overflow: auto;
+}
+.jelli-banner{
+    width: 100%;
+    margin-left: -4vh;
+    margin-top: 2vh;
+    height: 30rem;
+}
+
+.jelli-veritcal{
+    width: 15%;
+    height: auto;
+}
+
+.jelli-banner-md{
+    width: 100%;
+    margin-left: -4vh;
+    margin-top: 2vh;
+    height: 20rem;
+}
+
+.jelli-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--jelli-radius);
+  backdrop-filter: var(--jelli-blur);
+  -webkit-backdrop-filter: var(--jelli-blur);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.jelli-button:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3);
+}
+/* ListsTypes */
+.jelli-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0%;
+}
+
+.jelli-list-base ul li{
+     list-style: none;
+     margin-top: 2vh;
+}
+
+.jelli-list ul{
+    width: auto;
+    height: 4vh;
+
+}
+
+.jelli-left{
+    margin-left: auto;
+}
+.jelli-top{
+    margin-top: -100%;
+}
+
+.jelli-center{
+    margin: auto;
+}
+
+
+.jelli-list ul li{
+    list-style: none;
+    margin-left: 4vh;
+    
+}
+
+.jelli-list-float{
+    float: left;
+}
+
+
+/* Layouts*/
+
+.jelli-w-md{
+    width:50%;
+}
+.jelli-h-md{
+    height: 40vh;
+}
+
+.jelli-flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.jelli-flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.jelli-margin{
+    margin-left: 2%;
+}
+
+/* Texts */
+
+.jelli-title {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+}
+
+.jelli-subtitle {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  opacity: 0.9;
+  text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.4);
+}
+
+.jelli-text {
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+
+.jelli-note {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  opacity: 0.65;
+  font-style: italic;
+}
+
+/* animations Hovers */ 
+
+
+.jelli-hover-jelly:hover {
+  animation: jelly-shake 1s infinite ease-in-out;
+}
+
+@keyframes jelly-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  50% { transform: translateX(1px); }
+  75% { transform: translateX(-0.5px); }
+}
+
+
+.jelli-hover-bounce:hover {
+  animation: jelly-bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes jelly-bounce {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-2px); }
+  50% { transform: translateY(1px); }
+  75% { transform: translateY(-1px); }
+}
+
+.jelli-hover-glow-border:hover {
+  animation: jelly-border-glow 2s infinite ease-in-out;
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.3),
+    0 0 12px rgba(178, 215, 242, 0.3);
+}
+
+@keyframes jelly-border-glow {
+  0%, 100% { box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); }
+  50% { box-shadow: 0 0 16px rgba(178, 215, 242, 0.5); }
+}
+
+
+.jelli-hover-light-shift:hover {
+  animation: jelly-light-shift 2s infinite ease-in-out;
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.6),
+    inset -2px 0 6px rgba(255, 255, 255, 0.2),
+    0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes jelly-light-shift {
+  0%, 100% {
+    box-shadow:
+      inset 0 1px 3px rgba(255, 255, 255, 0.3),
+      inset -1px 0 2px rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    box-shadow:
+      inset 0 3px 10px rgba(255, 255, 255, 0.6),
+      inset -3px 0 10px rgba(255, 255, 255, 0.25);
+  }
+}
+
+
+.jelli-hover-topline:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.1));
+  animation: jelly-topline 2s infinite ease-in-out;
+}
+.jelli-hover-pop{
+    transition: all 0.7s;
+}
+
+.jelli-hover-pop:hover {
+  animation: jelly-pop-forward 1.5s infinite ease-in-out;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.1),
+    0 0 10px rgba(255, 255, 255, 0.2);
+  transform: translateZ(10px) scale(1.02);
+  transition: all 0.2s;
+}
+
+@keyframes jelly-pop-forward {
+  0%, 100% { transform: scale(1.01) translateZ(5px); }
+  50% { transform: scale(1.03) translateZ(12px); }
+}
+
+
+@keyframes jelly-topline {
+  0% { opacity: 0; transform: scaleX(0); }
+  50% { opacity: 1; transform: scaleX(1); }
+  100% { opacity: 0; transform: scaleX(0); }
+}
+
+.jelli-border-less{
+    border: none;
+}
