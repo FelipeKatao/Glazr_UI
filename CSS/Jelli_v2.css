@@ -91,7 +91,9 @@ flex-direction: row;
 }
 
 .jelli-orange-bg {
-  background: rgba(243, 154, 59, 0.500);
+  backdrop-filter: hue-rotate(240deg) blur(5px);
+  background: linear-gradient(135deg, rgba(255, 194, 81, 0.616), rgba(255, 179, 16, 0.39));
+
 }
 .jelli-orange-text {
   color: rgba(156, 81, 6, 0.692);
@@ -168,7 +170,6 @@ flex-direction: row;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #2c2c2c;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--jelli-radius);
   backdrop-filter: var(--jelli-blur);
@@ -233,9 +234,15 @@ flex-direction: row;
 .jelli-w-md{
     width:50%;
 }
+
+.jelli-w-l{
+    width:20%;
+}
 .jelli-h-md{
     height: 40vh;
 }
+
+
 
 .jelli-flex-row{
     display: flex;
@@ -249,6 +256,10 @@ flex-direction: row;
 
 .jelli-margin{
     margin-left: 2%;
+}
+
+.jelli-margin-auto{
+  margin: auto;
 }
 
 /* Texts */
