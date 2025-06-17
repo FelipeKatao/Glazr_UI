@@ -91,15 +91,15 @@ flex-direction: row;
 }
 
 .jelli-orange-bg {
-  background: linear-gradient(135deg, rgba(255, 190, 120, 0.4), rgba(255, 230, 180, 0.25));
+  background: rgba(243, 154, 59, 0.500);
 }
 .jelli-orange-text {
-  color: rgb(150, 85, 20);
+  color: rgba(156, 81, 6, 0.692);
 }
 
 
 .jelli-purple-bg {
-  background: linear-gradient(135deg, rgba(180, 150, 255, 0.4), rgba(230, 210, 255, 0.25));
+  background: rgba(89, 65, 119, 0.507);
 }
 .jelli-purple-text {
   color: rgb(85, 50, 130);
