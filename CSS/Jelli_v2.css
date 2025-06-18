@@ -390,6 +390,34 @@ color: rgb(117, 92, 24);
   100% { opacity: 0; transform: scaleX(0); }
 }
 
+
+.jelli-text-appear {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: jelli-text-rise 1s ease-out forwards;
+}
+
+@keyframes jelli-text-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(5px) rotate(-0.4deg);
+  }
+  75% {
+    transform: translateY(0px) rotate(0.4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* UTILS   */
 .jelli-border-less{
     border: none;
 }
+
