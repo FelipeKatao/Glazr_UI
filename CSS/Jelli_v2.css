@@ -415,9 +415,20 @@ color: rgb(117, 92, 24);
   }
 }
 
+.jelli-anima-y:hover{
+      box-shadow:
+    inset 0 1px 4px rgba(255, 255, 255, 0.6),
+    0 6px 14px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: 0.5s;
+}
 
 /* UTILS   */
 .jelli-border-less{
     border: none;
 }
 
+.jelli-base:hover{
+  z-index: 99;
+  
+}
