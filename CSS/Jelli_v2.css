@@ -394,7 +394,7 @@ color: rgb(117, 92, 24);
 .jelli-text-appear {
   opacity: 0;
   transform: translateY(20px);
-  animation: jelli-text-rise 1s ease-out forwards;
+  animation: jelli-text-rise 2s ease-out forwards;
 }
 
 @keyframes jelli-text-rise {
