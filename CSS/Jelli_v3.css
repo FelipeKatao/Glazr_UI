@@ -1,0 +1,208 @@
+/* Configurações do proejeto */ 
+body{
+   background: #ffaa0059;
+   overflow-x: hidden;
+
+}
+
+
+/* Formas base */
+
+.jelli-container{
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.541),
+    rgba(255, 255, 255, 0.123)
+  );
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  color: black;
+}
+
+.jelli-container-glass{
+     background-color: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #2c2c2c;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.jelli-border{
+    border-radius: 5vh;
+}
+
+/*Layouts  Base */ 
+
+.jelli-list ul li {
+    float: left;
+    list-style: none;
+    margin-left: 4vh;
+}
+
+.jelli-list ul{
+    margin-top: -1%;
+    margin-left: -10vh;
+}
+
+.jelli-list ul li  button{
+    background-color: transparent;
+    border: transparent;
+    transition: 02s all ease-in;
+}
+.jelli-list ul li button:hover{
+  text-decoration: underline;
+}
+
+.jelli-banner{
+    width: 100%;
+    height: 70vh;
+}
+
+/* Cores bases */
+.jelli-orange-bg{
+    background-color: rgba(255, 166, 0, 0.589);
+}
+
+.jelli-orange-text{
+    color: rgb(170, 111, 0);
+}
+
+.jelli-white-1-bg{
+    background-color: rgba(255, 255, 255, 0.575);
+}
+
+/* Forms */ 
+
+.jelli-button {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.jelli-button-bg {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #2c2c2c;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.jelli-button:hover , .jelli-button-bg:hover {
+  transform: scale(1.02);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.3),
+    0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+.jelli-input {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.25),
+    0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.jelli-input::placeholder {
+  color: rgba(44, 44, 44, 0.74); /* Texto placeholder suave e legível */
+}
+
+.jelli-input:focus {
+  box-shadow:
+    0 0 0 2px rgba(178, 215, 242, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  border-color: rgba(178, 215, 242, 0.6);
+  background-color: transparent;
+}
+
+
+/* Iluminadores */
+
+/* Iluminação leve (clara e suave) */
+.jelli-light-soft {
+  box-shadow:
+    -4px 0 8px rgba(255, 255, 255, 0.15),
+     4px 0 8px rgba(255, 255, 255, 0.15),
+     0 6px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Iluminação média (cinza translúcido) */
+.jelli-light-medium {
+  box-shadow:
+    -6px 0 10px rgba(180, 180, 180, 0.15),
+     6px 0 10px rgba(180, 180, 180, 0.15),
+     0 8px 12px rgba(180, 180, 180, 0.12);
+}
+
+/* Iluminação mais escura (vidro sob luz difusa) */
+.jelli-light-strong {
+  box-shadow:
+    -6px 0 10px rgba(0, 0, 0, 0.15),
+     6px 0 10px rgba(0, 0, 0, 0.15),
+     0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Icones */
+
+
+/* Animações */
+
+.jelli-text-appear {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: jelli-text-rise 1s ease-out forwards;
+}
+
+@keyframes jelli-text-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(5px) rotate(-0.4deg);
+  }
+  75% {
+    transform: translateY(0px) rotate(0.4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
