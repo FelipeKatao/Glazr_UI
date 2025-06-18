@@ -430,5 +430,15 @@ color: rgb(117, 92, 24);
 
 .jelli-base:hover{
   z-index: 99;
-  
+
+}
+.jelli-hidden{
+display: none;
+transition: all 2s;
+}
+.jelli-show:hover  .jelli-hidden{
+display: block;
+transition: all 2s;
+position: absolute;
+padding: 4vh;
 }
