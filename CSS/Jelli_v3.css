@@ -88,6 +88,36 @@ body{
     color: rgb(170, 111, 0);
 }
 
+.jelli-grape-bg {
+  background: linear-gradient(135deg, rgba(221, 203, 240, 0.35), rgba(108, 58, 168, 0.25));
+}
+.jelli-grape-text {
+  color: rgb(68, 30, 117);
+}
+
+.jelli-pink-bg {
+  background: linear-gradient(135deg, rgba(255, 212, 226, 0.35), rgba(220, 80, 140, 0.25));
+}
+.jelli-pink-text {
+  color: rgb(148, 38, 90);
+}
+
+.jelli-red-bg {
+  background: linear-gradient(135deg, rgba(255, 205, 205, 0.35), rgba(200, 50, 50, 0.25));
+}
+.jelli-red-text {
+  color: rgb(128, 22, 22);
+}
+
+
+.jelli-lemon-bg {
+  background: linear-gradient(135deg, rgba(255, 253, 180, 0.4), rgba(252, 220, 0, 0.25));
+}
+.jelli-lemon-text {
+  color: rgb(130, 110, 0);
+}
+
+
 .jelli-white-1-bg{
     background-color: rgba(255, 255, 255, 0.575);
 }
@@ -166,7 +196,6 @@ body{
 
 /* Iluminadores */
 
-/* Iluminação leve (clara e suave) */
 .jelli-light-soft {
   box-shadow:
     -4px 0 8px rgba(255, 255, 255, 0.15),
@@ -174,7 +203,7 @@ body{
      0 6px 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Iluminação média (cinza translúcido) */
+
 .jelli-light-medium {
   box-shadow:
     -6px 0 10px rgba(180, 180, 180, 0.15),
@@ -182,7 +211,7 @@ body{
      0 8px 12px rgba(180, 180, 180, 0.12);
 }
 
-/* Iluminação mais escura (vidro sob luz difusa) */
+
 .jelli-light-strong {
   box-shadow:
     -6px 0 10px rgba(0, 0, 0, 0.15),
