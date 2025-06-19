@@ -1,7 +1,8 @@
 /* Configurações do proejeto */ 
 body{
-   background: #ffaa0059;
+   background: #ffd27986;
    overflow-x: hidden;
+   
 
 }
 
@@ -39,6 +40,17 @@ body{
 .jelli-border{
     border-radius: 5vh;
 }
+/* Gradientes base*/
+
+.jelli-to-white{
+      background: linear-gradient(
+    to bottom,
+    #fff6eb 0%,      /* topo claro */
+    #ffe6c7 50%,     /* centro médio */
+    #fcd9b1 100%     /* fundo mais escuro */
+  );
+}
+
 
 /*Layouts  Base */ 
 
@@ -178,6 +190,34 @@ body{
      0 10px 16px rgba(0, 0, 0, 0.2);
 }
 
+.jelli-border-ilum{
+ border: 0.1vh rgba(44, 43, 43, 0.308) solid;
+ box-shadow: -2px 14px 56px -25px rgba(199,197,197,0.75) inset;
+-webkit-box-shadow: -2px 14px 56px -25px rgba(199,197,197,0.75) inset;
+-moz-box-shadow: -2px 14px 56px -25px rgba(199,197,197,0.75) inset;
+}
+
+.jelli-destak{
+    box-shadow: inset 0 0 6px rgba(255,255,255,0.3), 0 4px 8px rgba(0,0,0,0.15);
+border: 1px solid rgba(255,255,255,0.3);
+}
+
+.jelli-glow {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.4), 
+    0 0 20px rgba(255, 200, 255, 0.2) inset;
+  transition: all 0.3s ease;
+}
+.jelli-glow:hover {
+  box-shadow: 
+    0 0 12px rgba(255, 255, 255, 0.6), 
+    0 0 25px rgba(255, 200, 255, 0.3) inset;
+}
+
 /* Icones */
 
 
@@ -205,4 +245,57 @@ body{
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.jelli-hover-movey:hover{
+     transform: translateY(-4px);
+    transition: 0.4s all;
+}
+
+.jelli-border-glow-loop {
+  position: relative;
+  z-index: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.jelli-text-gradient-animate {
+  background: linear-gradient(270deg, #d18f00, #ad7600cb, #916300, #5a3e00ab);
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: jelli-gradient-shift 6s ease infinite;
+  font-weight: 700;
+}
+
+.jelli-border-gradient-animate {
+position: relative;
+  z-index: 0;
+  background: transparent;
+}
+
+.jelli-border-gradient-animate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: linear-gradient(270deg, #28a5ff, #f7a7b8, #fd25fd, #f2c6b2);
+  background-size: 600% 600%;
+  animation: jelli-gradient-shift 6s ease infinite;
+    opacity:0.4;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes jelli-gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
