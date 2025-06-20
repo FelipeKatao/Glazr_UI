@@ -373,3 +373,27 @@ position: relative;
 
 /* Validação */
 
+
+
+/*Teste*/
+.hidden{
+  
+    transition: 3s all;
+    animation: HiddenAnim 1s ease-out forwards
+}
+
+.surge{
+  opacity: 0;
+  transition: 3s all;
+  animation: surgeAnim 1s ease-out forwards
+}
+
+@keyframes surgeAnim {
+  0%{opacity: 0%;}
+  100%{opacity: 100%;}
+}
+
+@keyframes HiddenAnim {
+  0%{opacity: 100%;}
+  100%{opacity: 0%;}
+}

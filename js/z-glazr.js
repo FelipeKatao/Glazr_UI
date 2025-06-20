@@ -1,35 +1,37 @@
 
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll("[event-z]");
+  var IndexElement =0  
+  elements.forEach(el =>{
+        
+        const Attr = el.getAttribute("event-z")
+        const Parans = Attr.split(";").map(x=>x.trim())
 
-  document.querySelectorAll("[class*=z-glazr-]").forEach(target =>{
-    let Events = target.classList
-    let Target_z = ""
-    let Event_type = ""
-    let Declare = ""
-    Events.forEach(element => {
-       if(String(element).includes("z-glazr-event-")){
+        var element = document.querySelector(Parans[1])
 
-            // O que fazer com evento 
-            Event_type = String(element).split("-")[3]
-       }
-
-        if(String(element).includes("z-glazr-t-"))
-            {
-                 // Alvo do evento
-                Target_z = String(element).split("-")[3]
-            }
-
-        if(String(element).includes("z-glazr-func-")){
-            Declare = String(element).split("-")[3]
-        }
+        if(element){
+            Parans.forEach(event=>{
+                el.addEventListener(Parans[0],()=>{
+               let ClassAddRemove = [el.getAttribute("z-add").split(";"),el.getAttribute("z-remove").split(";")]
+               let VectorValues = []
+               let State = parseInt(element.getAttribute("z-state"))
+               if(ClassAddRemove[1].length > State)
+               {
+                   element.classList.remove(ClassAddRemove[1][element.getAttribute("z-state")])
+                   element.classList.add(ClassAddRemove[0][element.getAttribute("z-state")])
+                   element.setAttribute("z-state",State+1)
+                   
+                    
+               }
+               else{
+                   element.classList.remove(ClassAddRemove[1][0])
+                   element.classList.add(ClassAddRemove[0][0])
+                   element.setAttribute("z-state",1)
+               }
+            })
+            })
             
-    });
-    //Declaração do evento
-    target.addEventListener(Event_type,()=>{
-        const Target_css = document.querySelectorAll('.z-'+Target_z)
-        Target_css.forEach(tar =>{
-
-            tar.classList+=" "+Declare
-
-        })
+        }
     })
-  })
+})
+
