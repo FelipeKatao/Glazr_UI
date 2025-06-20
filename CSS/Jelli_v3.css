@@ -295,7 +295,7 @@ border: 1px solid rgba(255,255,255,0.3);
 }
 
 .jelli-text-appear {
-  opacity: 0;
+  opacity: 01;
   transform: translateY(20px);
   animation: jelli-text-rise 1s ease-out forwards;
 }
