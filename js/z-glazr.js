@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
                    element.classList.add(ClassAddRemove[0][element.getAttribute("z-state")])
                    element.setAttribute("z-state",State+1)
                    
+                   let Timer=element.getAttribute("z-timer")
+                   if(Timer)
+                   {
+                        TimerEvent(element.getAttribute("event-z"),Timer)
+                   }
                     
                }
                else{
@@ -35,3 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
+function TimerEvent(listTargets,time){
+    // Fazer função recursiva caso veja se o alvo tem z-timer implementado tambem!
+}
