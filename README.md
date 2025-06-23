@@ -1,6 +1,6 @@
 <h1 align="center">Glazr - Crie design modernos </h1>
 
-<p align="center">
+<p align="center"> 
   <img src="./Logo_Glazr.png" alt="Glazr" width="120px" height="120px"/>
   <br>
   <em>Glazr é um micro design system projeto para atender sites modernos.
