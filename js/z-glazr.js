@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   var IndexElement =0  
   elements.forEach(el =>{
         
-        const Attr = el.getAttribute("event-z")
+        const Attr = el.getAttribute("event-z") // Add
         const Parans = Attr.split(";").map(x=>x.trim())
 
         var element = document.querySelector(Parans[1])
