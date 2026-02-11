@@ -12,7 +12,7 @@
 
 ## Exemplos 
 Se quiser ver alguns sites construidos com Glazr temos alguns como esses , componente prontos:
-
+ 
 -[Oct8][oct8]
 -[Portifolio][ports]
 
